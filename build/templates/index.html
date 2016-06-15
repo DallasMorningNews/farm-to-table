@@ -1,0 +1,218 @@
+{%extends 'base.html'%}
+{%import 'partials/img.html' as img%}
+
+
+{%block custom_meta%}
+<meta content="{{keywords|join(',')}}" name="keywords" />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta content="{{shareText}}" name="description" />
+<title>{{pageTitle}}</title>
+<meta property="og:url" content="{{url}}" />
+<meta property="og:title" content="{{shareTitle}}"/>
+<meta property="og:description" content="{{shareText}}" name="description"/>
+<meta property="og:image" content="{{imgURL}}"/>
+<meta property="og:image:height" content="{{imgHeight}}"/>
+<meta property="og:image:width" content="{{imgWidth}}"/>
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{sectionTwitter}}" />
+<meta name="twitter:creator" content="@{{authorTwitter}}" />
+
+<meta name="liveFyreID" content="{{id}}" />
+
+<meta name="parsely-page" id='parsely-page' content='{"title": "{{shareTitle}}", "link": "{{url}}", "image_url": "{{imgURL}}", "type": "post", "post_id": "{{id}}", "pub_date": "{{publishDate}}", "section": "{{section}}", "author": ["{{authors}}"], "tags": ["{{keywords|join('","')|safe}}"]}' />
+
+<meta property="og:keywords" content="{{keywords|join(',')}}"/>
+
+<meta name="news_keywords" content="{{keywords|join(',')}}"/>
+{%endblock%}
+
+
+{%block custom_head%}
+{%endblock%}
+
+
+{%block ad%}
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript">
+DFP_networkId = "11222444";
+var DFPSlotSizes = [];
+if (jQuery(window).width() < 768)
+{
+var DFP_sitepage = "m.DMN/interactives";
+DFPSlotSizes = [320,50]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "x01");
+adSlot0.addService(googletag.pubads());
+
+/*
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "x02");
+adSlot1.addService(googletag.pubads());
+*/
+
+/*
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "x03");
+adSlot2.addService(googletag.pubads());
+*/
+}
+else
+{
+var DFP_sitepage = "DMN/interactives";
+ DFPSlotSizes = [728,90]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "Top");
+adSlot0.addService(googletag.pubads());
+
+/*
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "Top");
+adSlot1.addService(googletag.pubads());
+*/
+
+/*
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "Top");
+adSlot2.addService(googletag.pubads());
+*/
+ }
+</script>
+<script type="text/javascript">
+googletag.pubads().enableSingleRequest();
+googletag.pubads().enableSyncRendering();
+googletag.enableServices();
+</script>
+{%endblock%}
+
+
+{%block content%}
+<section id="contentHeader">
+	<img src="images/_defaultImage.jpg" alt="#" />
+	<p class="cutline">Cutline goes here. You can remove this tag if you don't feel the lead image needs a cutline</p>
+</section>
+<!-- end contentHeader -->
+
+<section class="contentWell clearFix">
+
+	<header id="storyHead">
+		<!-- <h3>Label, if needed</h3> -->
+		<h1>The <span style="color: #CF720D; font-size: 85px;">ultimate</span> <br> local summer meal</h1>
+		<h2>Chef Graham Dodds creates a feast with fresh-from-the-farm produce</h2>
+	</header>
+		<!-- end storyHead -->
+
+	<div class="bylineBlock">
+		<p><!-- By <a target="blank" href="mailto:emailaddresshere"></a>--> <!-- <a class="authorTwitter" href="twitterurlhere" target="_blank">Twitter</a> -->Tina Danze | Special Contributor</p>
+		<p>Published June 20, 2016</p>
+		</div>
+	<!-- end bylineBlock -->
+
+		<div class="shareComments shareCommentsTop">
+		<ul id="share-bar1" class="width-auto-hack"></ul>
+	</div>
+	<!-- end shareComments -->
+
+
+
+	<p class="intro"><span class="dropcap">F</span><p>arm-to-table. The phrase has been around so long that it&rsquo;s on the verge of clich&eacute;. Yet the practice has only recently drawn a wider circle of home cooks around the core of early adopters. Greater availability of locally raised products has dovetailed with increased public awareness about where our food comes from and how it&rsquo;s farmed.</p>
+
+    <p>Early on, chefs were privileged figures in the farm-to-table movement, sourcing local products that shoppers couldn&rsquo;t get. Although that&rsquo;s still the case with specialty vegetables, North Texas home cooks have more options than ever for buying a cornucopia of farm-fresh goods. Farmers markets have multiplied across north Texas in the past few years; co-ops and CSAs &mdash; community supported agriculture groups &mdash; are also on the rise; and supermarkets have stepped up their game with more produce from Texas farms. It all adds up to bringing more mainstream cooks into the farm-to-table fold.</p>
+
+    <p>We asked Graham Dodds, chef-owner of Wayward Sons, to share a summer menu that showcases locally sourced ingredients. Long before opening Wayward Sons, Dodds was an early supporter of local farmers and producers during his tenure as executive chef at Bolsa, and later at Hibiscus. His menu features a zesty, marinated grilled chicken dish; a dazzling ratatouille; an updated carrot salad with local goat cheese and honey; and a peach and berry cobbler that screams Texas summer.</p>
+
+    <p>The local shopping list for Dodds&rsquo; menu includes Windy Meadows Chicken &mdash; which is famously noted on menus at many top Dallas restaurants. Like chefs, you can have the chicken delivered to your door now &mdash; or buy it at many Dallas area markets.</p>
+
+    <p>Of course, you can&rsquo;t source every ingredient in Dodds&rsquo; recipes locally. But you can find enough of them to put a local stamp on the dishes and enjoy a quality and freshness upgrade. Read on for Dodds&rsquo; recipes and the local sources behind them &mdash; plus additional sources that we tapped, including some for bread and wine.</p>
+
+  <div class="row sections">
+    <div class="col-xs-12 col-md-8 subhead">
+      <h3>
+        Summer Ratatouille</h3>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="origins-toggle">Origins</div>
+      <div class="recipe-toggle">Recipe</div>
+    </div>
+  </div>
+  <h4>Squash and eggplant</h4>
+  <h5>Comeback Creek Farm, Pittsburgh, Texas | Co Rd 2119, Pittsburg, TX 75686</h5>
+
+
+
+
+  {%include "adblock1.html" %}
+
+  <!--
+    use the above include with adblock2.html and adblock3.html to place adblocks 2 and 3, then delete this comment.
+    it won't self-destruct, but it is cleaner
+  -->
+
+	<section class="credits clearFix">
+		<p>Author: <a href="mailto:emailaddress">Tina Danze</a></p>
+		<p>Editor: <a href="mailto:emailaddress">Name</a></p>
+		<p>Copy Editor: <a href="mailto:emailaddress">Name</a></p>
+		<p>Photos: <a href="mailto:emailaddress">Name</a></p>
+		<p>Graphics: <a href="mailto:emailaddress">Name</a></p>
+		<p>Designer: <a href="mailto:emailaddress">Kristi Walker</a></p>
+	</section>
+	<!-- end credits -->
+
+	<section class="more clearFix">
+		<h5>More from The Dallas Morning News</h5>
+		<a class="clearFix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+		<a class="clearFix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+		<a class="clearFix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+	</section>
+	<!-- end more -->
+
+		<div class="shareComments">
+		<ul id="share-bar2" class="width-auto-hack"></ul>
+        <div id="comments"></div>
+	</div>
+	<!-- end shareComments -->
+
+</section>
+<!-- end contentWell -->
+{%endblock%}
+
+
+
+
+{%block custom_foot%}
+	<script type="text/javascript"></script>
+{%endblock%}
+
+
+
+
+
+{%block custom_social_meta%}
+<script type="text/javascript">
+  var storyTitle = "{{tweetText}}", // headline in tweet card
+	storyURL = "{{url}}",
+	leadText = "{{shareText}}", //description in tweet card
+	storyIMG = "{{imgURL}}",
+	storyAuthor = "{{authors}}",
+	twitterTag = "{{sectionTwitter}}",
+	comments = true,
+	share = true;
+	OAS_sitepage = 'www.dallasnews.com/{{desk}}/{{section}}/';
+</script>
+{%endblock%}

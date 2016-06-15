@@ -1,0 +1,9 @@
+{
+  "name": "farmToTable",
+  "private": true,
+  "dependencies": {
+    "jquery-ui": null,
+    "fontawesome": null,
+    "bootstrap": null
+  }
+}
