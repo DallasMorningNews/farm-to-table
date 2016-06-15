@@ -2,14 +2,17 @@ $(document).ready(function() {
 
 	//custom scripting goes here
 
-$(document).ready(function(){
-    $("#origins-toggle").click(function(){
-        $(".origin-section").hide();
-    });
-    $("#recipe-toggle").click(function(){
-        $(".origin-section").show();
-    });
-});
+  $(document).ready(function(){
+      $("#origins-toggle").click(function(){
+          $("#rata-origins-section").show();
+          $("#rata-recipe-section").hide();
+      });
+      $("#recipe-toggle").click(function(){
+          $("#rata-recipe-section").show();
+          $("#rata-origins-section").hide();
+
+      });
+  });
 
 	// injecting current year into footer
 	// DO NOT DELETE
