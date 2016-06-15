@@ -1,10 +1,19 @@
 $(document).ready(function() {
-	
+
 	//custom scripting goes here
+
+$(document).ready(function(){
+    $("#origins-toggle").click(function(){
+        $(".origin-section").hide();
+    });
+    $("#recipe-toggle").click(function(){
+        $(".origin-section").show();
+    });
+});
 
 	// injecting current year into footer
 	// DO NOT DELETE
-	
+
 	var d = new Date();
 	var year = d.getFullYear();
 
@@ -17,4 +26,3 @@ $(document).ready(function() {
 
 
 });
-
