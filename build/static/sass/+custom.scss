@@ -70,7 +70,7 @@ h5 {
   margin: 0 25px 15px 0;
 }
 
-#origins-toggle, #recipe-toggle {
+.origins-toggle, .recipe-toggle {
   width: 100px;
   height: 30px;
   margin: 0 auto 0 auto;
@@ -86,31 +86,43 @@ h5 {
   top: 0px;
 }
 
-.origin-section, .recipe-section {
+// .toggle-color {
+//   background-color:
+// }
+
+.origins-section, .recipe-section {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#origins-toggle {
-  background-color: #CF720D;
+.origins-toggle {
   right: 100px;
+  cursor: pointer;
 }
 
-#recipe-toggle {
-  background-color: #CBCBCB;
+.recipe-toggle {
   right: 0px;
+  cursor: pointer;
+}
+
+.origins-orange {
+  background-color: #CF720D;
+}
+
+.origins-gray {
+  background-color: #CBCBCB;
+}
+
+.recipe-orange {
+  background-color: #CF720D;
+}
+
+.recipe-gray {
+  background-color: #CBCBCB;
 }
 
 .sections {
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-}
-
-
-.recipe-sections {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +139,7 @@ h5 {
   line-height: 30px;
 }
 
-p.origin-copy, p.recipe-intro {
+p.origins-copy, p.recipe-intro {
   font-size: 15px;
   line-height: 22px;
 }
@@ -143,6 +155,6 @@ p.recipe-list, p.recipe-copy {
   margin-top: 10px;
 }
 
-p.recipe-copy {
-  line-height: 26px;
-}
+// p.recipe-copy {
+//   line-height: 26px;
+// }
