@@ -188,8 +188,14 @@ p.recipe-list, p.recipe-copy {
   display: none;
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  z-index: 30;
 }
+
+// @media (min-width: 400px) {
+//   .mobile-sticky {
+//     display: none;
+//   }
+// }
 
 .mobile-sticky {
   width: 100%;
@@ -201,7 +207,7 @@ p.recipe-list, p.recipe-copy {
   display: none;
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  z-index: 40;
 }
 
 .mobile-directions {

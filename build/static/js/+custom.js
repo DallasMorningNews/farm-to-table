@@ -5,45 +5,45 @@ $(document).ready(function() {
   $(document).ready(function(){
 
 
-    //chicktouille mobile
-      $("#m-chick-origins-toggle").click(function(){
-          $("#chick-origins-section").show();
-          $("#m-chick-origins-toggle").addClass('origins-orange');
-          $("#m-chick-recipe-toggle").addClass('recipe-gray');
-          $("#m-chick-origins-toggle").removeClass('origins-gray');
-          $("#m-chick-recipe-toggle").removeClass('recipe-orange');
-          $("#chick-recipe-section").hide();
+    //chickentouille mobile
+      $("#m-chicken-origins-toggle").click(function(){
+          $("#chicken-origins-section").show();
+          $("#m-chicken-origins-toggle").addClass('origins-orange');
+          $("#m-chicken-recipe-toggle").addClass('recipe-gray');
+          $("#m-chicken-origins-toggle").removeClass('origins-gray');
+          $("#m-chicken-recipe-toggle").removeClass('recipe-orange');
+          $("#chicken-recipe-section").hide();
       });
 
-      $("#m-chick-recipe-toggle").click(function(){
-          $("#chick-recipe-section").show();
-          $("#chick-recipe-section").removeClass('hide');
-          $("#m-chick-origins-toggle").addClass('origins-gray');
-          $("#m-chick-recipe-toggle").addClass('recipe-orange');
-          $("#m-chick-origins-toggle").removeClass('origins-orange');
-          $("#m-chick-recipe-toggle").removeClass('recipe-gray');
-          $("#chick-origins-section").hide();
+      $("#m-chicken-recipe-toggle").click(function(){
+          $("#chicken-recipe-section").show();
+          $("#chicken-recipe-section").removeClass('hide');
+          $("#m-chicken-origins-toggle").addClass('origins-gray');
+          $("#m-chicken-recipe-toggle").addClass('recipe-orange');
+          $("#m-chicken-origins-toggle").removeClass('origins-orange');
+          $("#m-chicken-recipe-toggle").removeClass('recipe-gray');
+          $("#chicken-origins-section").hide();
       });
 
 
-    //chicktouille desktop
-      $("#chick-origins-toggle").click(function(){
-          $("#chick-origins-section").show();
-          $("#chick-origins-toggle").addClass('origins-orange');
-          $("#chick-recipe-toggle").addClass('recipe-gray');
-          $("#chick-origins-toggle").removeClass('origins-gray');
-          $("#chick-recipe-toggle").removeClass('recipe-orange');
-          $("#chick-recipe-section").hide();
+    //chickentouille desktop
+      $("#chicken-origins-toggle").click(function(){
+          $("#chicken-origins-section").show();
+          $("#chicken-origins-toggle").addClass('origins-orange');
+          $("#chicken-recipe-toggle").addClass('recipe-gray');
+          $("#chicken-origins-toggle").removeClass('origins-gray');
+          $("#chicken-recipe-toggle").removeClass('recipe-orange');
+          $("#chicken-recipe-section").hide();
       });
 
-      $("#chick-recipe-toggle").click(function(){
-          $("#chick-recipe-section").show();
-          $("#chick-recipe-section").removeClass('hide');
-          $("#chick-origins-toggle").addClass('origins-gray');
-          $("#chick-recipe-toggle").addClass('recipe-orange');
-          $("#chick-origins-toggle").removeClass('origins-orange');
-          $("#chick-recipe-toggle").removeClass('recipe-gray');
-          $("#chick-origins-section").hide();
+      $("#chicken-recipe-toggle").click(function(){
+          $("#chicken-recipe-section").show();
+          $("#chicken-recipe-section").removeClass('hide');
+          $("#chicken-origins-toggle").addClass('origins-gray');
+          $("#chicken-recipe-toggle").addClass('recipe-orange');
+          $("#chicken-origins-toggle").removeClass('origins-orange');
+          $("#chicken-recipe-toggle").removeClass('recipe-gray');
+          $("#chicken-origins-section").hide();
       });
 
 
