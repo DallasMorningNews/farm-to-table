@@ -88,7 +88,46 @@ $(document).ready(function() {
           $("#rata-origins-section").hide();
       });
 
+      //carrottouille mobile
+        $("#m-carrot-origins-toggle").click(function(){
+            $("#carrot-origins-section").show();
+            $("#m-carrot-origins-toggle").addClass('origins-orange');
+            $("#m-carrot-recipe-toggle").addClass('recipe-gray');
+            $("#m-carrot-origins-toggle").removeClass('origins-gray');
+            $("#m-carrot-recipe-toggle").removeClass('recipe-orange');
+            $("#carrot-recipe-section").hide();
+        });
 
+        $("#m-carrot-recipe-toggle").click(function(){
+            $("#carrot-recipe-section").show();
+            $("#carrot-recipe-section").removeClass('hide');
+            $("#m-carrot-origins-toggle").addClass('origins-gray');
+            $("#m-carrot-recipe-toggle").addClass('recipe-orange');
+            $("#m-carrot-origins-toggle").removeClass('origins-orange');
+            $("#m-carrot-recipe-toggle").removeClass('recipe-gray');
+            $("#carrot-origins-section").hide();
+        });
+
+
+      //carrottouille desktop
+        $("#carrot-origins-toggle").click(function(){
+            $("#carrot-origins-section").show();
+            $("#carrot-origins-toggle").addClass('origins-orange');
+            $("#carrot-recipe-toggle").addClass('recipe-gray');
+            $("#carrot-origins-toggle").removeClass('origins-gray');
+            $("#carrot-recipe-toggle").removeClass('recipe-orange');
+            $("#carrot-recipe-section").hide();
+        });
+
+        $("#carrot-recipe-toggle").click(function(){
+            $("#carrot-recipe-section").show();
+            $("#carrot-recipe-section").removeClass('hide');
+            $("#carrot-origins-toggle").addClass('origins-gray');
+            $("#carrot-recipe-toggle").addClass('recipe-orange');
+            $("#carrot-origins-toggle").removeClass('origins-orange');
+            $("#carrot-recipe-toggle").removeClass('recipe-gray');
+            $("#carrot-origins-section").hide();
+        });
 
   //mobile nav
   $(document).scroll(function() {
