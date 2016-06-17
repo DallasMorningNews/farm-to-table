@@ -17,7 +17,7 @@ h4, h5 {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 550px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -45,6 +45,26 @@ h5 {
   font-style: italic;
   font-weight: 900;
   margin: 0 25px 15px 0; }
+
+.mobile-toggles {
+  height: 40px;
+  padding: 0; }
+
+.m-origins-toggle, .m-recipe-toggle {
+  width: 100px;
+  height: 30px;
+  margin: 0 auto 0 auto;
+  display: inline-block;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 15px;
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #FFF;
+  text-transform: uppercase;
+  top: 0px;
+  float: left;
+  cursor: pointer; }
 
 .origins-toggle, .recipe-toggle {
   width: 100px;
@@ -132,6 +152,7 @@ p.recipe-list, p.recipe-copy {
   margin-top: -20px;
   margin-bottom: 0px;
   display: none;
+  position: fixed;
   bottom: 0;
   z-index: 1; }
 
@@ -278,6 +299,15 @@ input {
 
 .dish-section {
   height: 300px; }
+
+.mobile-dish {
+  height: 150px; }
+
+.overlay ul {
+  margin-top: -100px; }
+
+.overlay ul li {
+  height: 150px; }
 
 .dish {
   max-width: 100%;
