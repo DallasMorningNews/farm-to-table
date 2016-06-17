@@ -92,7 +92,7 @@ googletag.enableServices();
 
 {%block content%}
 <section id="contentHeader">
-	<img src="images/_defaultImage.jpg" alt="#" />
+	<img src="images/_wood3.jpg" alt="#" />
 	<p class="cutline">Cutline goes here. You can remove this tag if you don't feel the lead image needs a cutline</p>
 </section>
 <!-- end contentHeader -->
@@ -123,7 +123,19 @@ googletag.enableServices();
 
     <p>Early on, chefs were privileged figures in the farm-to-table movement, sourcing local products that shoppers couldn&rsquo;t get. Although that&rsquo;s still the case with specialty vegetables, North Texas home cooks have more options than ever for buying a cornucopia of farm-fresh goods. Farmers markets have multiplied across north Texas in the past few years; co-ops and CSAs &mdash; community supported agriculture groups &mdash; are also on the rise; and supermarkets have stepped up their game with more produce from Texas farms. It all adds up to bringing more mainstream cooks into the farm-to-table fold.</p>
 
+    <!-- about the chef -->
+      <aside class="factBox rightBlock sideBlock">
+          {{ img.jpg('LOCALSUMMERMEAL_51110267','A black cat', class='catpic', id='fluffy', sizes='(min-width: 1500px) 1400px, 90vw' ) }}
+          <h5>About XXXX</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim nisl ligula, at elementum ante rutrum at. Mauris quis magna ligula. Morbi malesuada semper velit ac hendrerit. Duis in sapien non sem condimentum lobortis. </p>
+          <p>Vestibulum interdum, est vel elementum tincidunt, ante mauris tempus eros, commodo viverra arcu diam euismod erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras elementum nulla nunc, vitae venenatis magna fringilla nec. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim nisl ligula, at elementum ante rutrum at. Mauris quis magna ligula. Morbi malesuada semper velit ac hendrerit. Duis in sapien non sem condimentum lobortis. Nunc nec suscipit purus. </p>
+          <p>Vestibulum interdum, est vel elementum tincidunt, ante mauris tempus eros, commodo viverra arcu diam euismod erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras elementum nulla nunc, vitae venenatis magna fringilla nec. </p>
+      </aside>
+    <!-- end about the chef-->
+
     <p>We asked Graham Dodds, chef-owner of Wayward Sons, to share a summer menu that showcases locally sourced ingredients. Long before opening Wayward Sons, Dodds was an early supporter of local farmers and producers during his tenure as executive chef at Bolsa, and later at Hibiscus. His menu features a zesty, marinated grilled chicken dish; a dazzling ratatouille; an updated carrot salad with local goat cheese and honey; and a peach and berry cobbler that screams Texas summer.</p>
+    <!-- end right fact box -->
 
     <p>The local shopping list for Dodds&rsquo; menu includes Windy Meadows Chicken &mdash; which is famously noted on menus at many top Dallas restaurants. Like chefs, you can have the chicken delivered to your door now &mdash; or buy it at many Dallas area markets.</p>
 
@@ -131,7 +143,7 @@ googletag.enableServices();
 <!-- end intro copy -->
 
 <!-- Ratatouille origins-->
-  <div class="row sections">
+  <div id="rata" class="row sections">
     <div class="col-xs-7 col-sm-7 col-md-7 subhead">
       <h3>
         Summer Ratatouille</h3>
@@ -159,7 +171,7 @@ googletag.enableServices();
 
   <!-- Ratatouille recipe-->
     <div id="rata-recipe-section" class="recipe-section hide">
-      <p class="recipe-intro">This seasonal special at Wayward Sons is a versatile side dish — it pairs well with poultry, fish, and meats. Dodds says it can also be served as a meatless entrée, topped with crumbled ricotta salata; splurge on a crusty loaf of artisan bread to go with it.</p>
+      <p class="recipe-intro">This seasonal special at Wayward Sons is a versatile sidedish-section — it pairs well with poultry, fish, and meats. Dodds says it can also be served as a meatless entrée, topped with crumbled ricotta salata; splurge on a crusty loaf of artisan bread to go with it.</p>
 
       <h4>Ingredients</h4>
       <p class="recipe-list">
@@ -190,6 +202,72 @@ googletag.enableServices();
     </div>
 <!-- end Ratatouille -->
 
+</section>
+<!-- end well content -->
+
+<!-- Bottom sticky nav MOBILE -->
+
+
+<!-- <span style="cursor: pointer" onclick="openNav()">
+  <i class="fa fa-4x fa-angle-up" aria-hidden="true"></i>
+</span> -->
+
+    <div class="col-xs-12 sm-hidden md-hidden lg-hidden xl-hidden mobile-sticky">
+      <div class="col-xs-12">
+      <!-- <i class="fa fa-4x fa-angle-up" aria-hidden="true"></i> -->
+        <input type="checkbox" id="op"></input>
+        <div class="lower">
+          <label for="op">^</label>
+        </div>
+        <div class="overlay overlay-hugeinc">
+        			<label for="op"></label>
+        			<nav>
+        				<ul>
+        					<li><a href="#">Home</a></li>
+        					<li><a href="#">About</a></li>
+        					<li><a href="#">Work</a></li>
+        					<li><a href="#">Clients</a></li>
+        					<li><a href="#">Contact</a></li>
+        				</ul>
+        			</nav>
+        </div>
+      </div>
+
+
+      <p class="mobile-directions">Choose a dish for its ingredients origins and recipe.</p>
+    </div>
+
+<!-- Bottom sticky nav DESKTOP-->
+
+    <div class="container-fluid sticky-nav">
+      <div class="nav-directions">
+         Choose a dish for its ingredients origins and recipe.
+      </div>
+      <div class="row col-xs-12">
+        <div class="col-sm-1"></div>
+        <div class="hidden-xs col-sm-2 dish-section dish-section">
+          <a href="#rata"><img class="dish" src="../images/_bread.png"></a>
+        </div>
+        <div class="hidden-xs col-sm-2 dish-section">
+          <a href="#"><img class="dish" src="../images/_chicken.png"></a>
+        </div>
+        <div class="hidden-xs col-sm-2 dish-section">
+          <a href="#"><img class="dish dish-chicken" src="../images/_ratatouille.png"></a>
+        </div>
+        <div class="hidden-xs col-sm-2 dish-section">
+          <a href="#"><img class="dish" src="../images/_carrotsalad.png"></a>
+        </div>
+        <div class="hidden-xs col-sm-2 dish-section">
+          <a href="#"><img class="dish" src="../images/_cobbler.png"></a>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+
+    </div>
+<!-- end bottom sticky nav -->
+
+
+<section class="contentWell clearFix">
 
   <!--
     use the above include with adblock2.html and adblock3.html to place adblocks 2 and 3, then delete this comment.
@@ -231,6 +309,7 @@ googletag.enableServices();
         <div id="comments"></div>
 	</div>
 	<!-- end shareComments -->
+
 
 </section>
 <!-- end contentWell -->

@@ -155,6 +155,223 @@ p.recipe-list, p.recipe-copy {
   margin-top: 10px;
 }
 
+
+
+.sticky-nav {
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+  background-image: url("../images/_wood3.jpg");
+  background-repeat: no-repeat;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.mobile-sticky {
+  width: 100%;
+  min-width: 300px;
+  height: 60px;
+  background-color: #CF720D;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  display: none;
+  // position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.mobile-directions {
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+.fa-angle-up {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    margin-bottom: -98px;
+    margin-top: -2px;
+    text-align: center;
+}
+
+@import "http://webfonts.ru/import/notcourier.css";
+
+
+.lower{
+  width:40px;
+  margin:10% auto;
+  margin-bottom: -20px;
+  margin-top: -5px;
+  padding:0px;
+  color:white;
+}
+
+input{
+  display:none;
+}
+
+.lower label{
+  font-family: 'NotCourierSans';
+  text-transform:uppercase;
+  font-size:40px;
+  text-align:center;
+}
+
+.lower label:hover{
+  cursor:pointer;
+}
+
+.overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+}
+
+.overlay label{
+	width: 58px;
+	height:58px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: url('http://tympanus.net/Development/FullscreenOverlayStyles/img/cross.png');
+	z-index: 100;
+  cursor:pointer;
+}
+
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+}
+
+.overlay ul li a {
+	font-weight: 300;
+	display: block;
+	color: white;
+  text-decoration:none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+  font-family: 'NotCourierSans';
+  text-transform:uppercase;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #849368;
+}
+
+.lower~.overlay-hugeinc{
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+#op:checked~.overlay-hugeinc{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-moz-perspective: 300px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+#op:checked~.overlay-hugeinc nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+#op:not(:checked)~.overlay-hugeinc nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+.nav-directions {
+  max-width: 500px;
+  min-width: 300px;
+  height: 40px;
+  background-color: #CF720D;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 10px;
+
+}
+
+.dish-section {
+  height: 300px;
+}
+
+.dish {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 15px 0 25px 0;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 400px) {
+  .sticky-nav {
+      background-image: none;
+  }
+  .nav-directions {
+    display: none;
+  }
+}
+
+
 // p.recipe-copy {
 //   line-height: 26px;
 // }

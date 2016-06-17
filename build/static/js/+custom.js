@@ -43,7 +43,28 @@ $(document).ready(function() {
         $("#chick-recipe-toggle").removeClass('recipe-gray');
         $("#chick-origins-section").hide();
     });
+
+  //mobile nav
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 800) {
+      $('.mobile-sticky').fadeIn();
+    } else {
+      $('.mobile-sticky').fadeOut();
+    }
   });
+
+  //desktop nav
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 1500) {
+      $('.sticky-nav').fadeIn();
+    } else {
+      $('.sticky-nav').fadeOut();
+    }
+  });
+
+});
 
 	// injecting current year into footer
 	// DO NOT DELETE
