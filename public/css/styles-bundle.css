@@ -875,6 +875,9 @@ XX. ADS
   margin-bottom: .5rem !important; }
 
 @import "http://webfonts.ru/import/notcourier.css";
+a:hover {
+  color: #CF720D; }
+
 h1, h2, h3, h4, h5, h6, p {
   color: #414141; }
 
@@ -885,9 +888,11 @@ h4, h5 {
 
 #storyHead h1 {
   font-family: "Playfair Display";
+  font-size: 85px;
   font-style: italic;
+  color: #CF720D;
   font-weight: 900;
-  line-height: 95%; }
+  line-height: 100%; }
 
 #storyHead h2 {
   font-family: "Open Sans";
@@ -901,26 +906,31 @@ h3 {
   font-family: "Baskerville";
   font-style: italic;
   font-weight: 700;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: -20px; }
 
 h4 {
   font-family: "Open Sans";
   font-style: italic;
-  font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 4px;
   font-size: 25px; }
 
 h5 {
   font-family: "Open Sans";
   font-size: 15px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  line-height: 21px;
+  text-transform: uppercase; }
 
 .dropcap {
   font-family: "Playfair Display";
   font-style: italic;
   font-weight: 900;
-  margin: 0 25px 15px 0; }
+  font-size: 200px;
+  margin: 20px 30px 35px 0;
+  color: #414141; }
 
 .mobile-toggles {
   height: 40px;
@@ -986,7 +996,7 @@ h5 {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px; }
+  margin-top: 80px; }
 
 .subhead {
   padding: 0px;
@@ -1001,13 +1011,16 @@ p.origins-copy, p.recipe-intro {
   line-height: 22px; }
 
 p.recipe-intro {
-  margin-top: 10px; }
+  margin-top: 30px; }
 
 p.recipe-list, p.recipe-copy {
   font-family: "Open Sans";
   font-size: 15px;
   line-height: 22px;
   margin-top: 10px; }
+
+.active {
+  opacity: .0; }
 
 .sticky-nav {
   width: 100%;
@@ -1020,7 +1033,7 @@ p.recipe-list, p.recipe-copy {
   bottom: 0;
   z-index: 30; }
 
-.mobile-sticky {
+#mobile-sticky {
   width: 100%;
   min-width: 300px;
   height: 60px;
@@ -1037,35 +1050,35 @@ p.recipe-list, p.recipe-copy {
   color: white;
   font-family: "Playfair Display";
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;
   padding-top: 20px;
-  margin-top: -20px; }
+  margin-top: 15px; }
 
 .fa-angle-up {
   display: inline-block;
   width: 100%;
   color: white;
   margin-bottom: -98px;
-  margin-top: -2px;
-  text-align: center; }
+  text-align: center;
+  font-size: 5px; }
 
 .lower {
-  width: 40px;
-  margin: 10% auto;
-  margin-bottom: -20px;
-  margin-top: -5px;
-  padding: 0px;
-  color: white; }
+  color: white;
+  width: calc(100% + 30px);
+  text-align: center;
+  margin: 0px 0 0px -30px;
+  height: 60px;
+  position: absolute; }
 
 input {
   display: none; }
 
 .lower label {
-  font-family: 'NotCourierSans';
-  text-transform: uppercase;
   font-size: 40px;
-  text-align: center; }
+  height: 60px;
+  width: 100%;
+  cursor: pointer; }
 
 .lower label:hover {
   cursor: pointer; }
@@ -1079,12 +1092,13 @@ input {
   background: rgba(0, 0, 0, 0.9); }
 
 .overlay label {
-  width: 58px;
-  height: 58px;
+  width: 45px;
+  height: 45px;
   position: absolute;
   right: 20px;
   top: 20px;
-  background: url("http://tympanus.net/Development/FullscreenOverlayStyles/img/cross.png");
+  font-size: 40px;
+  color: white;
   z-index: 100;
   cursor: pointer; }
 
@@ -1102,14 +1116,14 @@ input {
   padding: 0;
   margin: 0 auto;
   display: inline-block;
-  height: 100%;
-  position: relative; }
+  position: relative;
+  margin-top: 60px; }
 
 .overlay ul li {
   display: block;
-  height: 20%;
-  height: calc(100% / 5);
-  min-height: 54px; }
+  font-size: 24px;
+  line-height: 30px;
+  margin: 30px 0; }
 
 .overlay ul li a {
   font-weight: 300;
@@ -1118,8 +1132,7 @@ input {
   text-decoration: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  font-family: 'NotCourierSans';
-  text-transform: uppercase; }
+  font-family: 'Open Sans'; }
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
@@ -1169,7 +1182,7 @@ input {
   color: white;
   font-family: "Playfair Display";
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   padding-top: 10px; }
 
@@ -1181,9 +1194,6 @@ input {
 
 .overlay ul {
   margin-top: -100px; }
-
-.overlay ul li {
-  height: 150px; }
 
 .dish {
   max-width: 100%;

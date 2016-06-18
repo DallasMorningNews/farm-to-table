@@ -2,10 +2,9 @@ $(document).ready(function() {
 
 	//custom scripting goes here
 
-  $(document).ready(function(){
 
 
-    //chickentouille mobile
+    //chicken mobile
       $("#m-chicken-origins-toggle").click(function(){
           $("#chicken-origins-section").show();
           $("#m-chicken-origins-toggle").addClass('origins-orange');
@@ -26,7 +25,7 @@ $(document).ready(function() {
       });
 
 
-    //chickentouille desktop
+    //chicken desktop
       $("#chicken-origins-toggle").click(function(){
           $("#chicken-origins-section").show();
           $("#chicken-origins-toggle").addClass('origins-orange');
@@ -45,7 +44,6 @@ $(document).ready(function() {
           $("#chicken-recipe-toggle").removeClass('recipe-gray');
           $("#chicken-origins-section").hide();
       });
-
 
     //ratatouille mobile
       $("#m-rata-origins-toggle").click(function(){
@@ -88,7 +86,7 @@ $(document).ready(function() {
           $("#rata-origins-section").hide();
       });
 
-      //carrottouille mobile
+      //carrot mobile
         $("#m-carrot-origins-toggle").click(function(){
             $("#carrot-origins-section").show();
             $("#m-carrot-origins-toggle").addClass('origins-orange');
@@ -109,7 +107,7 @@ $(document).ready(function() {
         });
 
 
-      //carrottouille desktop
+      //carrot desktop
         $("#carrot-origins-toggle").click(function(){
             $("#carrot-origins-section").show();
             $("#carrot-origins-toggle").addClass('origins-orange');
@@ -129,13 +127,65 @@ $(document).ready(function() {
             $("#carrot-origins-section").hide();
         });
 
+
+        //cobbler mobile
+          $("#m-cobbler-origins-toggle").click(function(){
+              $("#cobbler-origins-section").show();
+              $("#m-cobbler-origins-toggle").addClass('origins-orange');
+              $("#m-cobbler-recipe-toggle").addClass('recipe-gray');
+              $("#m-cobbler-origins-toggle").removeClass('origins-gray');
+              $("#m-cobbler-recipe-toggle").removeClass('recipe-orange');
+              $("#cobbler-recipe-section").hide();
+          });
+
+          $("#m-cobbler-recipe-toggle").click(function(){
+              $("#cobbler-recipe-section").show();
+              $("#cobbler-recipe-section").removeClass('hide');
+              $("#m-cobbler-origins-toggle").addClass('origins-gray');
+              $("#m-cobbler-recipe-toggle").addClass('recipe-orange');
+              $("#m-cobbler-origins-toggle").removeClass('origins-orange');
+              $("#m-cobbler-recipe-toggle").removeClass('recipe-gray');
+              $("#cobbler-origins-section").hide();
+          });
+
+
+        //cobbler desktop
+          $("#cobbler-origins-toggle").click(function(){
+              $("#cobbler-origins-section").show();
+              $("#cobbler-origins-toggle").addClass('origins-orange');
+              $("#cobbler-recipe-toggle").addClass('recipe-gray');
+              $("#cobbler-origins-toggle").removeClass('origins-gray');
+              $("#cobbler-recipe-toggle").removeClass('recipe-orange');
+              $("#cobbler-recipe-section").hide();
+          });
+
+          $("#cobbler-recipe-toggle").click(function(){
+              $("#cobbler-recipe-section").show();
+              $("#cobbler-recipe-section").removeClass('hide');
+              $("#cobbler-origins-toggle").addClass('origins-gray');
+              $("#cobbler-recipe-toggle").addClass('recipe-orange');
+              $("#cobbler-origins-toggle").removeClass('origins-orange');
+              $("#cobbler-recipe-toggle").removeClass('recipe-gray');
+              $("#cobbler-origins-section").hide();
+          });
+
+          // $("#mobile-sticky").click(function(){
+          //     $(".overlay").show();
+          // });
+
+          $("#menu-rata, #menu-carrot, #menu-chicken, #menu-bread, #menu-cobbler").click(function(){
+              $(".overlay").hide();
+          });
+
+
+
   //mobile nav
   $(document).scroll(function() {
     var y = $(this).scrollTop();
-    if (y > 800) {
-      $('.mobile-sticky').fadeIn();
+    if (y > 1500) {
+      $('#mobile-sticky').fadeIn();
     } else {
-      $('.mobile-sticky').fadeOut();
+      $('#mobile-sticky').fadeOut();
     }
   });
 
@@ -149,7 +199,43 @@ $(document).ready(function() {
     }
   });
 
-});
+//highlight nav on scroll
+    // $sections incleudes all of the container divs that relate to menu items.
+    var $sections = $('.highlight');
+
+    // The user scrolls
+    $(window).scroll(function(){
+
+      // currentScroll is the number of pixels the window has been scrolled
+      var currentScroll = $(this).scrollTop();
+
+      // $currentSection is somewhere to place the section we must be looking at
+      var $currentSection
+
+      // We check the position of each of the divs compared to the windows scroll positon
+      $sections.each(function(){
+        // divPosition is the position down the page in px of the current section we are testing
+        var divPosition = $(this).offset().top;
+
+        // If the divPosition is less the the currentScroll position the div we are testing has moved above the window edge.
+        // the -1 is so that it includes the div 1px before the div leave the top of the window.
+        if( divPosition - 1 < currentScroll ){
+          // We have either read the section or are currently reading the section so we'll call it our current section
+          $currentSection = $(this);
+
+          // If the next div has also been read or we are currently reading it we will overwrite this value again. This will leave us with the LAST div that passed.
+        }
+
+        // This is the bit of code that uses the currentSection as its source of ID
+        var id = $currentSection.attr('id');
+     	 $('img').removeClass('active');
+     	 $("[href=#"+id+"]").addClass('active');
+
+      })
+
+    });
+
+
 
 	// injecting current year into footer
 	// DO NOT DELETE
