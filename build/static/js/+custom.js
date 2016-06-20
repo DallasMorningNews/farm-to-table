@@ -169,12 +169,29 @@ $(document).ready(function() {
               $("#cobbler-origins-section").hide();
           });
 
-          // $("#mobile-sticky").click(function(){
-          //     $(".overlay").show();
-          // });
 
-          $("#menu-rata, #menu-carrot, #menu-chicken, #menu-bread, #menu-cobbler").click(function(){
-              $(".overlay").hide();
+// hide/show mobile menu on click
+
+          $(".lower").click(function(){
+              $(".overlay").addClass("displayed");
+          });
+
+          $(".menu-item").click(function(e){
+              e.preventDefault();
+
+              var targetID = $(this).attr("href");
+
+              $("html, body").animate({
+                  scrollTop: $(targetID).offset().top
+              }, 500);
+
+              $(".overlay").removeClass("displayed");
+
+          });
+
+          $(".overlay label").click(function(){
+              $(".overlay").removeClass("displayed");
+
           });
 
 
@@ -210,7 +227,7 @@ $(document).ready(function() {
       var currentScroll = $(this).scrollTop();
 
       // $currentSection is somewhere to place the section we must be looking at
-      var $currentSection
+      var $currentSection;
 
       // We check the position of each of the divs compared to the windows scroll positon
       $sections.each(function(){
@@ -231,7 +248,7 @@ $(document).ready(function() {
      	 $('img').removeClass('active');
      	 $("[href=#"+id+"]").addClass('active');
 
-      })
+     });
 
     });
 
