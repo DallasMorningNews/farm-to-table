@@ -210,47 +210,139 @@ $(document).ready(function() {
   $(document).scroll(function() {
     var y = $(this).scrollTop();
     if (y > 1500) {
-      $('.sticky-nav').fadeIn();
+      $('.sticky-nav, .title-background').fadeIn();
     } else {
-      $('.sticky-nav').fadeOut();
+      $('.sticky-nav, .title-background').fadeOut();
     }
   });
 
-//highlight nav on scroll
-    // $sections incleudes all of the container divs that relate to menu items.
-    var $sections = $('.highlight');
+//Add "selected" class to navigation on scroll
 
-    // The user scrolls
-    $(window).scroll(function(){
+// // Cache selectors
+// var lastId,
+//     topMenu = $(".dish-container"),
+//     topMenuHeight = topMenu.outerHeight()+15,
+//     // All list items
+//     menuItems = topMenu.find("a"),
+//     // Anchors corresponding to menu items
+//     scrollItems = menuItems.map(function(){
+//       var item = $($(this).attr("href"));
+//       if (item.length) { return item; }
+//     });
+//
+// // Bind click handler to menu items
+// // so we can get a fancy scroll animation
+// menuItems.click(function(e){
+//   var href = $(this).attr("href"),
+//       offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+//   $('html, body').stop().animate({
+//       scrollTop: offsetTop
+//   }, 300);
+//   e.preventDefault();
+// });
+//
+// // Bind to scroll
+// $(window).scroll(function(){
+//    // Get container scroll position
+//    var fromTop = $(this).scrollTop()+topMenuHeight;
+//
+//    // Get id of current scroll item
+//    var cur = scrollItems.map(function(){
+//      if ($(this).offset().top < fromTop)
+//        return this;
+//    });
+//    // Get the id of the current element
+//    cur = cur[cur.length-1];
+//    var id = cur && cur.length ? cur[0].id : "";
+//
+//    if (lastId !== id) {
+//        lastId = id;
+//        // Set/remove active class
+//        menuItems
+//          .parent().removeClass("active")
+//          .end().filter("[href='#"+id+"']").parent().addClass("active");
+//          if ($(".highlight").hasClass('active')) {
+//            $(".dish").attr('src', '[href='#"+id+"']' + '.png');
+//
+//          } else  {
+//            console.log("dark");
+//            $(".dish").attr('src', '/images' + '[href='#"+id+"']' + '-dark.png');
+//          }
+//    }
+// });
 
-      // currentScroll is the number of pixels the window has been scrolled
-      var currentScroll = $(this).scrollTop();
 
-      // $currentSection is somewhere to place the section we must be looking at
-      var $currentSection;
 
-      // We check the position of each of the divs compared to the windows scroll positon
-      $sections.each(function(){
-        // divPosition is the position down the page in px of the current section we are testing
-        var divPosition = $(this).offset().top;
 
-        // If the divPosition is less the the currentScroll position the div we are testing has moved above the window edge.
-        // the -1 is so that it includes the div 1px before the div leave the top of the window.
-        if( divPosition - 1 < currentScroll ){
-          // We have either read the section or are currently reading the section so we'll call it our current section
-          $currentSection = $(this);
+  // // return section food name
+  //  var sections = $("section.highlight").attr("data-section");
+  //
+  //  $(window).scroll(function () {
+  //
+  //  var current_pos = $(this).scrollTop() + 150;
+  //  var nav_height = $(".sticky-bar").outerHeight();
+  //
+  //      $(sections).each(function () {
+  //      //sections.each(function() {
+  //          var pos_top = $(this).offset().top - nav_height;
+  //          //var pos_top = $(this).offset().top - nav_height;
+  //          var pos_bottom = pos_top + $(this).outerHeight();
+  //
+  //          //console.log($(this).attr("id"));
+  //          // console.log(pos_bottom);
+  //          // console.log(current_pos);
+  //
+  //          if (current_pos >= pos_top && current_pos <= pos_bottom) {
+  //               console.log("add class");
+  //              $('a#' + sections +'.dish').addClass('active');
+  //          }
+  //
+  //          else {
+  //               console.log("remove class");
+  //              $('a#' + sections +'.dish').removeClass('active');
+  //              //console.log("outside");
+  //          }
+  //        });
+  //      });
 
-          // If the next div has also been read or we are currently reading it we will overwrite this value again. This will leave us with the LAST div that passed.
-        }
 
-        // This is the bit of code that uses the currentSection as its source of ID
-        var id = $currentSection.attr('id');
-     	 $('img').removeClass('active');
-     	 $("[href=#"+id+"]").addClass('active');
 
-     });
 
-    });
+
+//     // $sections incleudes all of the container divs that relate to menu items.
+//     var $sections = $('.highlight');
+//
+//     // The user scrolls
+//     $(window).scroll(function(){
+//
+//       // currentScroll is the number of pixels the window has been scrolled
+//       var currentScroll = $(this).scrollTop();
+//
+//       // $currentSection is somewhere to place the section we must be looking at
+//       var $currentSection;
+//
+//       // We check the position of each of the divs compared to the windows scroll positon
+//       $sections.each(function(){
+//         // divPosition is the position down the page in px of the current section we are testing
+//         var divPosition = $(this).offset().top;
+//
+//         // If the divPosition is less the the currentScroll position the div we are testing has moved above the window edge.
+//         // the -1 is so that it includes the div 1px before the div leave the top of the window.
+//         if( divPosition - 1 < currentScroll ){
+//           // We have either read the section or are currently reading the section so we'll call it our current section
+//           $currentSection = $(this);
+//
+//           // If the next div has also been read or we are currently reading it we will overwrite this value again. This will leave us with the LAST div that passed.
+//         }
+//
+//         // This is the bit of code that uses the currentSection as its source of ID
+//         var id = $currentSection.attr('id');
+//      	 $('img').removeClass('active');
+//      	 $("[href=#"+id+"]").addClass('active');
+//
+//      });
+//
+//     });
 
 
 
