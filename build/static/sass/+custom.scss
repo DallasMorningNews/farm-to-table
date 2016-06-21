@@ -426,7 +426,10 @@ input {
   margin: 0 auto;
   display: inline-block;
   position: relative;
-  margin-top: 60px; }
+  margin-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .overlay ul li {
   display: block;
