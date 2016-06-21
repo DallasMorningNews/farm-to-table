@@ -1,16 +1,16 @@
 {
   "id": "82164457255",
   "name": "farm-to-table",
-  "pageTitle": "<Title>",
-  "shareTitle": "<Title>",
-  "shareText": "<Text>",
-  "tweetText": "<Text>",
+  "pageTitle": "From farm to table",
+  "shareTitle": "A farm-to-table menu celebrates summer with produce from Chef Graham Dodds fields and recipes",
+  "shareText": "Greater availability of locally raised products has dovetailed with increased public awareness about where our food comes from and how it’s farmed",
+  "tweetText": "A farm-to-table menu celebrates summer with produce from Chef Graham Dodds fields and recipes",
   "publishYear": 2016,
-  "publishDate": "2016-6-14T00:00:00Z",
+  "publishDate": "2016-6-21T15:00:00Z",
   "url": "http://interactives.dallasnews.com/2016/farm-to-table/",
-  "authors": "<Authors - comma-separated, lowercase>",
-  "desk": "<Desk>",
-  "section": "<Section>",
+  "authors": "tina danze",
+  "desk": "guidelive",
+  "section": "arts and life",
   "keywords": [
     "interactives",
     "dallas",
@@ -18,11 +18,20 @@
     "dfw news",
     "dallas newspaper",
     "dallas morning news",
-    "dallas morning news newspaper"
+    "dallas morning news newspaper",
+    "graham dodds",
+    "jerry’s grilled chicken",
+    "summer ratatouille",
+    "carrot salad",
+    "meyer lemon rosemary bread",
+    "peach and berry cobbler",
+    "farm to table"
+
+
   ],
-  "imgURL": "http://interactives.dallasnews.com/2016/farm-to-table/undefined",
-  "imgWidth": "<Width - w/out \"px\">",
-  "imgHeight": "<Height - w/out \"px\">",
-  "sectionTwitter": "<handle - w/out \"@\">",
-  "authorTwitter": "<handle - w/out \"@\">"
+  "imgURL": "http://interactives.dallasnews.com/2016/farm-to-table/images/_share.jpg",
+  "imgWidth": "1200",
+  "imgHeight": "630",
+  "sectionTwitter": "GuideLive",
+  "authorTwitter": "TinaDanze"
 }

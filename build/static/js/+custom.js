@@ -176,7 +176,7 @@ $(document).ready(function() {
               $(".overlay").addClass("displayed");
           });
 
-          $(".menu-item").click(function(e){
+          $(".menu-item, .dish").click(function(e){
               e.preventDefault();
 
               var targetID = $(this).attr("href");
@@ -218,29 +218,29 @@ $(document).ready(function() {
 
 //Add "selected" class to navigation on scroll
 
-// // Cache selectors
-// var lastId,
-//     topMenu = $(".dish-container"),
-//     topMenuHeight = topMenu.outerHeight()+15,
-//     // All list items
-//     menuItems = topMenu.find("a"),
-//     // Anchors corresponding to menu items
-//     scrollItems = menuItems.map(function(){
-//       var item = $($(this).attr("href"));
-//       if (item.length) { return item; }
-//     });
-//
-// // Bind click handler to menu items
-// // so we can get a fancy scroll animation
-// menuItems.click(function(e){
-//   var href = $(this).attr("href"),
-//       offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-//   $('html, body').stop().animate({
-//       scrollTop: offsetTop
-//   }, 300);
-//   e.preventDefault();
-// });
-//
+// Cache selectors
+var lastId,
+    topMenu = $(".dish-container"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
 // // Bind to scroll
 // $(window).scroll(function(){
 //    // Get container scroll position
@@ -262,88 +262,123 @@ $(document).ready(function() {
 //          .parent().removeClass("active")
 //          .end().filter("[href='#"+id+"']").parent().addClass("active");
 //          if ($(".highlight").hasClass('active')) {
-//            $(".dish").attr('src', '[href='#"+id+"']' + '.png');
+//            var targetImage = $(this).attr("id");
+//           //  $(".dish").attr("src", "images/_" + targetImage + ".png")
+//           //  $(".dish").attr('src', 'images/' + '[href='#"+id+"']' + '.png');
 //
 //          } else  {
 //            console.log("dark");
-//            $(".dish").attr('src', '/images' + '[href='#"+id+"']' + '-dark.png');
+//           //  $(".dish").attr("src", "images/_" + targetImage + "-dark.png")
+//           //  $(".dish").attr('src', 'images/' + '[href='#"+id+"']' + '-dark.png');
 //          }
 //    }
 // });
 
+var sectionPos = [];
+var sections = []
+
+var lastScrollTop = 0;
+
+
+function updateNav() {
+
+  var fromTop = $(window).scrollTop();
+  var wHeight = $(window).height();
+
+  if (sectionPos.length === 0) {
+    $.each($(".highlight"), function() {
+      sections.push($(this).attr("id"));
+      sectionPos.push($(this).offset().top);
+
+          for (i=0; i<sections.length; i++) {
+            console.log("images/_" + sections[i] + ".png");
+              $.preloadImages("../images/_" + sections[i] + ".png");
+          }
+    })
+  }
+
+  if (lastScrollTop > fromTop) {
+    checkStickyNav(fromTop, wHeight, .5);
+  } else {
+    checkStickyNav(fromTop, wHeight, .75)
+  }
+
+  lastScrollTop = fromTop;
+
+}
+
+$(window).on("scroll", _.throttle(updateNav, 1000));
+
+
+function checkStickyNav(scrollTop, height, modifier) {
+  var position = scrollTop + (height*modifier);
+
+  if (position > sectionPos[0] && position < sectionPos[1]) {
+    var target = 0;
+    for (i=0; i<sectionPos.length; i++) {
+      if (i !==0) {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + "-dark.png");
+      } else {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + ".png");
+      }
+    }
+  }
+
+  if (position > sectionPos[1] && position < sectionPos[2]) {
+    var target = 1;
+    for (i=0; i<sectionPos.length; i++) {
+      if (i !==1) {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + "-dark.png");
+      } else {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + ".png");
+      }
+    }
+  }
+
+  if (position > sectionPos[2] && position < sectionPos[3]) {
+    var target = 2;
+    for (i=0; i<sectionPos.length; i++) {
+      if (i !==2) {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + "-dark.png");
+      } else {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + ".png");
+      }
+    }
+  }
+
+  if (position > sectionPos[3] && position < sectionPos[4]) {
+    var target = 3;
+    for (i=0; i<sectionPos.length; i++) {
+      if (i !==3) {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + "-dark.png");
+      } else {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + ".png");
+      }
+    }
+  }
+
+  if (position > sectionPos[4]) {
+    var target = 4;
+    for (i=0; i<sectionPos.length; i++) {
+      if (i !==4) {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + "-dark.png");
+      } else {
+        $("." + sections[i]).attr("src", "images/_" + sections[i] + ".png");
+      }
+    }
+  }
+
+}
 
 
 
-  // // return section food name
-  //  var sections = $("section.highlight").attr("data-section");
-  //
-  //  $(window).scroll(function () {
-  //
-  //  var current_pos = $(this).scrollTop() + 150;
-  //  var nav_height = $(".sticky-bar").outerHeight();
-  //
-  //      $(sections).each(function () {
-  //      //sections.each(function() {
-  //          var pos_top = $(this).offset().top - nav_height;
-  //          //var pos_top = $(this).offset().top - nav_height;
-  //          var pos_bottom = pos_top + $(this).outerHeight();
-  //
-  //          //console.log($(this).attr("id"));
-  //          // console.log(pos_bottom);
-  //          // console.log(current_pos);
-  //
-  //          if (current_pos >= pos_top && current_pos <= pos_bottom) {
-  //               console.log("add class");
-  //              $('a#' + sections +'.dish').addClass('active');
-  //          }
-  //
-  //          else {
-  //               console.log("remove class");
-  //              $('a#' + sections +'.dish').removeClass('active');
-  //              //console.log("outside");
-  //          }
-  //        });
-  //      });
+//////////////////////////////////////////////////////
+    ////  IMAGE PRELOADER ////////////////////////////////
+    //////////////////////////////////////////////////////
 
-
-
-
-
-//     // $sections incleudes all of the container divs that relate to menu items.
-//     var $sections = $('.highlight');
-//
-//     // The user scrolls
-//     $(window).scroll(function(){
-//
-//       // currentScroll is the number of pixels the window has been scrolled
-//       var currentScroll = $(this).scrollTop();
-//
-//       // $currentSection is somewhere to place the section we must be looking at
-//       var $currentSection;
-//
-//       // We check the position of each of the divs compared to the windows scroll positon
-//       $sections.each(function(){
-//         // divPosition is the position down the page in px of the current section we are testing
-//         var divPosition = $(this).offset().top;
-//
-//         // If the divPosition is less the the currentScroll position the div we are testing has moved above the window edge.
-//         // the -1 is so that it includes the div 1px before the div leave the top of the window.
-//         if( divPosition - 1 < currentScroll ){
-//           // We have either read the section or are currently reading the section so we'll call it our current section
-//           $currentSection = $(this);
-//
-//           // If the next div has also been read or we are currently reading it we will overwrite this value again. This will leave us with the LAST div that passed.
-//         }
-//
-//         // This is the bit of code that uses the currentSection as its source of ID
-//         var id = $currentSection.attr('id');
-//      	 $('img').removeClass('active');
-//      	 $("[href=#"+id+"]").addClass('active');
-//
-//      });
-//
-//     });
-
+    $.preloadImages = function() {
+        $("<img />").attr("src", arguments[0]);
+    };
 
 
 	// injecting current year into footer

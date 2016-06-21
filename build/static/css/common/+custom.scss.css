@@ -1,3 +1,6 @@
+.fyre-stream-sort {
+  margin-bottom: 100px; }
+
 a {
   color: #cc933a; }
 
@@ -8,7 +11,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6, p {
   color: #414141; }
 
-h4, h5 {
+h4, h5.farm-name {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto; }
@@ -28,14 +31,14 @@ h4 {
   margin-bottom: 4px;
   font-size: 25px; }
 
-h5 {
+h5.farm-name {
   font-family: "Open Sans";
   font-size: 15px;
   line-height: 21px;
   text-transform: uppercase;
   font-style: italic; }
 
-h6 {
+h6.address {
   font-family: "Open Sans";
   font-size: 15px;
   margin-bottom: 10px;
@@ -49,7 +52,7 @@ h6 {
 .story-head-desktop {
   position: absolute;
   top: 20px;
-  width: 105%; }
+  width: 100%; }
 
 .desktop-bylineBlock {
   width: 100%;
@@ -89,7 +92,7 @@ h2.deck-desktop {
   font-weight: 900;
   font-size: 200px;
   margin: 20px 30px 35px 0;
-  color: #414141; }
+  color: #cc933a; }
 
 /* Toggles */
 .mobile-toggles {
@@ -218,7 +221,7 @@ p.recipe-list, p.recipe-copy {
   width: 100%;
   position: fixed;
   display: none;
-  bottom: 0;
+  bottom: -2px;
   z-index: 31;
   opacity: .7; }
 
@@ -239,7 +242,7 @@ p.recipe-list, p.recipe-copy {
   max-width: 100%;
   max-height: 100%;
   padding: 15px 0 25px 0;
-  width: auto;
+  width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -398,7 +401,15 @@ input {
   .sticky-nav {
     background-image: none; }
   .nav-directions {
-    display: none; } }
+    display: none; }
+  #storyHead h1 {
+    font-size: 55px; }
+  #storyHead h2 {
+    font-size: 22px; } }
+
+@media (max-width: 1200px) {
+  .dropcap {
+    color: #212121; } }
 
 @media (min-width: 1200px) {
   .mobile-head {
