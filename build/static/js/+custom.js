@@ -292,7 +292,7 @@ function updateNav() {
 
           for (i=0; i<sections.length; i++) {
             console.log("images/_" + sections[i] + ".png");
-              $.preloadImages("../images/_" + sections[i] + ".png");
+              $.preloadImages("images/_" + sections[i] + ".png");
           }
     })
   }
